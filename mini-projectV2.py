@@ -7,8 +7,7 @@ Courier_list = [{}]
 Orders = [{}]
 Order_status_list = ['pending','awaiting payment','awaiting shipment','shipped','awaiting pickup','completed','declined','refunded','disputed']
 
-#WEEK 4 CREATE ORDER STATUS LIST
-#populating varibles from external files
+#populating varibles from additional files
 with open("products.csv", 'r') as file:
   reader = csv.DictReader(file, delimiter=',')
   for row in reader:
@@ -72,14 +71,14 @@ elif (int(Menu_selection) == 1):
 
     if (int(Menu_selection) == 0):
             exit
-    elif (int(Menu_selection) == 1):                                            #1. create a product
+    elif (int(Menu_selection) == 1):                                           
         print(Product_list)
-    elif (int(Menu_selection) == 2):                                            #1. view products
+    elif (int(Menu_selection) == 2):                                           
         New_product = {}
         New_product["name"] = str(input("enter product name"))
         New_product["price"] = int(input("enter product price"))
         Product_list.append(New_product)  
-    elif (int(Menu_selection) == 3):                                            #3. update a product
+    elif (int(Menu_selection) == 3):                                         
         for (i, item) in enumerate(Product_list, start=0):
             print(i, item)
         Product_selection = int(input("Enter product index to update?"))
@@ -92,7 +91,7 @@ elif (int(Menu_selection) == 1):
         if (aOrder != ''):
             del Product_list[Product_selection]['price']
             Product_list[Product_selection]['price'] = aOrder
-    elif (int(Menu_selection) == 4):                                             #4. delete a product
+    elif (int(Menu_selection) == 4):                                             
         for (i, item) in enumerate(Product_list, start=0):
             print(i, item)
         Product_list.pop(int(input("Enter product index to delete:")))
