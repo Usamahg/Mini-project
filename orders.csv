@@ -1,3 +1,8 @@
-customer name, customer address, customer phone number, orderStatus
-placeholder,placeholder,0000,testing
+customer name,customer address,customer phone number,order status
+
+placeholder,placeholder,0,pending
+
+placeholder,placeholder,0,pending
+
+placeholder,placeholder,0,hopeful
 
